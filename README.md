@@ -41,3 +41,11 @@ Los proyectos nuevos deben consumir estos tokens en lugar de copiar colores o re
 ## Propiedad
 
 © DesarrollAMO. Los elementos de identidad y marca permanecen bajo control de DesarrollAMO aunque este repositorio sea público.
+
+## Gobernanza y validación
+
+- ssets/manifest.json declara los assets canónicos y sus rutas.
+- docs/governance.md define cómo evoluciona la marca sin romper consumidores.
+-
+ode scripts/validate.mjs valida manifiesto, SVG y consistencia JSON/CSS.
+- `node scripts/validate.mjs` es el control obligatorio antes de publicar una versión.
