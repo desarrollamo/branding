@@ -1,6 +1,6 @@
 {
   "name": "DesarrollAMO",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "wordmark": "DesarrollAMO.",
   "claim": "Tecnología con alma.",
   "colors": {
@@ -20,5 +20,10 @@
   "assets": {
     "mark": "assets/logo/mark.svg",
     "horizontal": "assets/logo/horizontal.svg"
+  },
+  "attribution": {
+    "label": "Desarrollado por",
+    "wordmark": "DesarrollAMO.",
+    "url": "https://desarrollamo.com.ar/"
   }
 }

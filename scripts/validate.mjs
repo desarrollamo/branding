@@ -6,7 +6,9 @@ const readJson = (rel) => JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8
 const manifest = readJson('assets/manifest.json');
 const tokens = readJson('tokens/brand.json');
 
-const required = [manifest.assets.mark.path, manifest.assets.horizontal.path, manifest.tokens.json, manifest.tokens.css];
+if (manifest.version !== tokens.version) throw new Error('Versiones de manifest y tokens no coinciden');
+
+const required = [manifest.assets.mark.path, manifest.assets.horizontal.path, manifest.tokens.json, manifest.tokens.css, 'docs/attribution.md'];
 for (const rel of required) {
   if (!fs.existsSync(path.join(root, rel))) throw new Error(`Falta asset requerido: ${rel}`);
 }
@@ -21,5 +23,8 @@ for (const [name, hex] of Object.entries(tokens.colors)) {
   if (!/^#[0-9A-F]{6}$/i.test(hex)) throw new Error(`Color inválido ${name}: ${hex}`);
   if (!css.includes(hex.toUpperCase())) throw new Error(`Token ${name} no coincide entre JSON y CSS`);
 }
+
+if (tokens.attribution?.url !== 'https://desarrollamo.com.ar/') throw new Error('URL canónica de atribución inválida');
+if (tokens.attribution?.wordmark !== tokens.wordmark) throw new Error('Wordmark de atribución no coincide');
 
 console.log(`Branding ${manifest.version}: validación PASS`);

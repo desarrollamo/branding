@@ -28,10 +28,10 @@ Este repositorio contiene únicamente la parte de la marca que queremos que terc
 
 ## Versionado
 
-Los consumidores deben fijar una release estable, no depender de `main`. La versión actual es **1.2.0**.
+Los consumidores deben fijar una release estable, no depender de `main`. La versión actual es **1.3.0**.
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/desarrollamo/branding@v1.2.0/tokens/brand.css");
+@import url("https://cdn.jsdelivr.net/gh/desarrollamo/branding@v1.3.0/tokens/brand.css");
 ```
 
 Antes de publicar una versión se ejecuta:
