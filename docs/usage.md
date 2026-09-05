@@ -4,26 +4,22 @@
 
 Usar `assets/logo/mark.svg` cuando el espacio es reducido y `assets/logo/horizontal.svg` cuando debe leerse el nombre completo.
 
-No recolorear el símbolo arbitrariamente. La combinación oficial es Sky + Pink + Yellow.
+No recolorear el símbolo arbitrariamente. La combinación oficial parte de Sky + Pink + Yellow.
 
 ## Wordmark
 
 La escritura preferida es **DesarrollAMO.** con `Desarroll` en Sky, `AMO` en Pink y el punto en Sky.
 
-## Tokens web
+## Tokens
 
-Después de publicar una versión, los proyectos pueden fijarla mediante CDN:
+Los proyectos pueden consumir una versión estable de los tokens:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/desarrollamo/branding@v1.0.0/tokens/brand.css");
+@import url("https://cdn.jsdelivr.net/gh/desarrollamo/branding@v1.2.0/tokens/brand.css");
 ```
 
-Usar versiones etiquetadas en producción evita cambios inesperados.
+Para componentes, estados, layout, radios, superficies y patrones de interacción usar `desarrollamo/design-system`; no extender Branding con decisiones de UI.
 
-## Footer
+## Mantenimiento
 
-`components/footer.html` conserva el footer oficial actualmente utilizado, pero enlaza al dominio canónico `desarrollamo.com.ar`.
-
-## Regla de mantenimiento
-
-Cambiar primero este repositorio, publicar una nueva versión y luego actualizar los proyectos consumidores. No mantener copias divergentes de la marca.
+Cambiar primero este repositorio, validar, publicar una nueva versión y después actualizar consumidores. No mantener copias divergentes de los assets canónicos.

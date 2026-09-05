@@ -1,51 +1,47 @@
 # DesarrollAMO · Branding
 
-Fuente de verdad pública para la identidad visual de **DesarrollAMO**.
+Fuente pública y versionada de la identidad visual oficial de **DesarrollAMO**.
 
-Este repositorio centraliza logos, colores, tokens y componentes de marca para que los sitios y productos de DesarrollAMO no repliquen valores a mano.
+Este repositorio contiene únicamente la parte de la marca que queremos que terceros puedan reutilizar y reconocer. Los componentes de interfaz viven en `desarrollamo/design-system`; la implementación de productos y la operación interna no pertenecen aquí.
 
-## Identidad actual
+## Identidad
 
 - Nombre: **DesarrollAMO**
 - Wordmark: **DesarrollAMO.**
-- Claim usado: **Tecnología con alma.**
+- Claim: **Tecnología con alma.**
 - Sitio: https://desarrollamo.com.ar/
-- Email empresarial: desarrollamoficial@gmail.com
 
 ## Paleta oficial
 
-| Token | Hex | Uso |
+| Token | Hex | Uso de marca |
 |---|---|---|
-| Sky | `#7DD3FC` | Desarroll / links / información |
-| Pink | `#FF5AA5` | AMO / CTA principal |
-| Pink Soft | `#FF77B4` | gradientes / hover |
-| Coral | `#FF9F6E` | acento secundario |
-| Yellow | `#FFD166` | destaque / energía |
-| Ink | `#111827` | texto oscuro |
-| Mist | `#E5E7EB` | texto claro |
+| Sky | `#7DD3FC` | Desarroll / información |
+| Pink | `#FF5AA5` | AMO / acento principal |
+| Pink Soft | `#FF77B4` | variación rosa |
+| Coral | `#FF9F6E` | acento cálido |
+| Yellow | `#FFD166` | energía / destaque |
+| Ink | `#111827` | neutro oscuro |
+| Mist | `#E5E7EB` | neutro claro |
+## Contenido
 
-## Estructura
+`assets/logo/` contiene los SVG canónicos. `tokens/brand.json` y `tokens/brand.css` exponen los valores de marca para consumo humano y automático. `docs/usage.md` explica aplicación básica y `docs/governance.md` define cómo versionar cambios sin romper consumidores.
 
-- `assets/logo/` — logotipo y símbolo oficiales en SVG.
-- `tokens/brand.css` — variables CSS listas para importar.
-- `tokens/brand.json` — tokens para apps, scripts y generadores.
-- `components/footer.html` — footer oficial reutilizable.
-- `docs/usage.md` — reglas mínimas de aplicación.
+## Versionado
 
-## Fuente
+Los consumidores deben fijar una release estable, no depender de `main`. La versión actual es **1.2.0**.
 
-La versión inicial fue consolidada el 2026-09-05 a partir del footer público existente y de los estilos actualmente publicados en desarrollamo.com.ar.
+```css
+@import url("https://cdn.jsdelivr.net/gh/desarrollamo/branding@v1.2.0/tokens/brand.css");
+```
 
-Los proyectos nuevos deben consumir estos tokens en lugar de copiar colores o reconstruir el logo manualmente.
+Antes de publicar una versión se ejecuta:
 
-## Propiedad
+```bash
+node scripts/validate.mjs
+```
 
-© DesarrollAMO. Los elementos de identidad y marca permanecen bajo control de DesarrollAMO aunque este repositorio sea público.
+## Límites
 
-## Gobernanza y validación
+Branding no contiene componentes de producto, lógica de negocio, infraestructura, secretos, datos de clientes ni procesos internos.
 
-- ssets/manifest.json declara los assets canónicos y sus rutas.
-- docs/governance.md define cómo evoluciona la marca sin romper consumidores.
--
-ode scripts/validate.mjs valida manifiesto, SVG y consistencia JSON/CSS.
-- `node scripts/validate.mjs` es el control obligatorio antes de publicar una versión.
+© DesarrollAMO. La publicación de estos assets no transfiere la titularidad de la marca.
