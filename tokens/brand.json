@@ -1,0 +1,24 @@
+{
+  "name": "DesarrollAMO",
+  "version": "1.0.0",
+  "wordmark": "DesarrollAMO.",
+  "claim": "Tecnología con alma.",
+  "colors": {
+    "sky": "#7DD3FC",
+    "pink": "#FF5AA5",
+    "pinkSoft": "#FF77B4",
+    "coral": "#FF9F6E",
+    "yellow": "#FFD166",
+    "ink": "#111827",
+    "mist": "#E5E7EB",
+    "white": "#FFFFFF",
+    "black": "#000000"
+  },
+  "typography": {
+    "sans": "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+  },
+  "assets": {
+    "mark": "assets/logo/mark.svg",
+    "horizontal": "assets/logo/horizontal.svg"
+  }
+}
